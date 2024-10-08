@@ -1,9 +1,9 @@
-const firstSyllableConsonants = ["m", "p", "pr", "sp", "spr", "b", "br", "f", "fr", "v", "n", "t", "tr", "st", "str", "d", "dr", "c", "cl", "sc", "scl", "s", "sl", "z", "r", "l", "ch", "chr", "sch", "schr", "sh", "shr", "j", "y", "k", "kr", "sk", "skr", "g", "gr", "x", "xr", "w", ""];
-const otherSyllableConsonants = ["m", "p", "pr", "b", "br", "f", "fr", "v", "n", "t", "tr", "d", "dr", "c", "cl", "s", "sl", "z", "r", "l", "ch", "chr", "sh", "shr", "j", "y", "k", "kr", "g", "gr", "x", "xr", "w", ""];
-const specialConsonants = ["pr", "br", "fr", "tr", "dr", "cl", "sl", "chr", "shr", "kr", "gr", "xr"];
-const maleVowels = ["ï", "u", "ë", "o", "a"];
+const firstSyllableConsonants = ["m", "p", "pr", "sp", "spr", "b", "br", "f", "fr", "v", "n", "t", "tr", "st", "str", "d", "dr", "c", "cl", "sc", "scl", "s", "sl", "z", "r", "l", "ch", "chr", "sch", "schr", "sh", "shr", "j", "y", "k", "kr", "sk", "skr", "g", "gr", "x", "xr", "w", "", "q", "gh", "qr", "ghr"];
+const otherSyllableConsonants = ["m", "p", "pr", "b", "br", "f", "fr", "v", "n", "t", "tr", "d", "dr", "c", "cl", "s", "sl", "z", "r", "l", "ch", "chr", "sh", "shr", "j", "y", "k", "kr", "g", "gr", "x", "xr", "w", "", "gh", "qr", "ghr"];
+const specialConsonants = ["pr", "br", "fr", "tr", "dr", "cl", "sl", "chr", "shr", "kr", "gr", "xr", "qr", "ghr"];
+const maleVowels = ["ui", "u", "oi", "o", "a"];
 const femaleVowels = ["i", "ü", "e", "ö", "a"];
-const endConsonants = ["m", "p", "b", "f", "v", "n", "t", "d", "c", "s", "z", "l", "ch", "sh", "j", "k", "g", "x"];
+const endConsonants = ["m", "p", "b", "f", "v", "n", "t", "d", "c", "s", "z", "l", "ch", "sh", "j", "k", "g", "x", "q", "gh"];
 const random = Math.random;
 
 function getRandomElement(arr) {
