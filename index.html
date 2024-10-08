@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ドゥルグ語単語生成器</title>
+    <style>
+        body {
+            background-color: #008C45;
+            color: #FCD116;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #FCD116;
+        }
+        label, button {
+            color: #008C45;
+            background-color: #FCD116;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #FFB320;
+        }
+        #generatedWords {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ドゥルグ語単語生成器</h1>
+    <label for="wordCount">生成する単語の数:</label>
+    <input type="number" id="wordCount" min="1" value="1">
+    <label for="syllableCount">音節数:</label>
+    <select id="syllableCount">
+        <option value="random">音節はランダムで生成する</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <button onclick="generateWords()">単語を生成する</button>
+    <div id="generatedWords"></div>
+    <footer>
+        <p>バージョン 1.0</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
