@@ -20,9 +20,10 @@ function generateWord() {
     let headConsonant = getRandomHeadConsonant(true);
     word += headConsonant;
 
-    let vowels = getRandomElement(random() < 1/2 ? femaleVowels : maleVowels);
-    let vowel = getRandomElement(vowels);
-    word += vowel;
+    // 一音節目の母音を選択
+    let isFemale = random() < 1/2;
+    let firstVowel = getRandomElement(isFemale ? femaleVowels : maleVowels);
+    word += firstVowel;
 
     if (random() < 0.2) {
         word += getRandomElement(endConsonants);
@@ -38,7 +39,8 @@ function generateWord() {
         }
         word += nextHeadConsonant;
 
-        let nextVowel = getRandomElement(vowels);
+        // 同じ性別の中からランダムに母音を選択
+        let nextVowel = getRandomElement(isFemale ? femaleVowels : maleVowels);
         word += nextVowel;
 
         if (random() < 0.2) {
